@@ -30,6 +30,7 @@ const median = (nums) => {
 };
 
 const spreadsheetFunctions = {
+  "": (str) => str, // to handle potential edge cases
   sum,
   average,
   median,
@@ -43,6 +44,7 @@ const spreadsheetFunctions = {
   random: ([x, y]) => Math.floor(Math.random() * y + x),
   range: (nums) => range(...nums),
   nodupes: (nums) => nums.filter((num, idx) => nums.indexOf(num) == idx), // remove duplicates
+  // or nodupes: nums => [...new Set(nums).values()]
 };
 
 const applyFunction = (str) => {
